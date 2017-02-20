@@ -1,5 +1,5 @@
 {
-    "name" : "pixelpinplugins/pixelpin-auth", 
+    "name" : "pixelpinplugins/pixelpin-auth3", 
     "type" : "library",
     "description" : "Lightweight Authentication Module for Zend-Framework 2 using the hybridauth-library",
     "keywords" : [ "login","social network","user", "twitter", "facebook", "github", "zf2", "module"],
