@@ -4,7 +4,7 @@ Uses the [Social Connect](https://github.com/SocialConnect/auth) PHP library to 
 
 Requirements
 ------------
-* [Zend Framework 3](https://github.com/zendframework/zf2) (2.*)
+* [Zend Framework 3](https://github.com/zendframework/zf2) (3.*)
 The following is installed along with the PixelPin Auth 3:
 * [PixelPin Social Connect Auth](https://github.com/PixelPinPlugins/pixelpin-auth-sc) (1.*)
 * [PixelPin Social Connect Common](https://github.com/PixelPinPlugins/pixelpin-common-sc) (1.*)
