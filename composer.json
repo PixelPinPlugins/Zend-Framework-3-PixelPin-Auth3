@@ -19,7 +19,7 @@
         "zendframework/zend-session": "^2.7 || ^3.0",
         "zendframework/zend-uri": "^2.5 || ^3.0",
         "zendframework/zend-view": "^2.7 || ^3.0",
-        "pixelpinplugins/pixelpin-auth-sc": "^0.1",
+        "pixelpinplugins/pixelpin-auth-sc": "^0.3",
         "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev" : {
@@ -28,7 +28,7 @@
     },
     "autoload" : {
         "psr-4" : {
-            "OrgHeiglHybridAuth\\" : "src/"
+            "PixelpinAuth\\" : "src/"
         },
         "classmap": [
             "./"
@@ -36,7 +36,7 @@
     },
     "autoload-dev" : {
         "psr-4" : {
-            "OrgHeiglHybridAuthTest\\" : "tests/"
+            "PixelpinAuthTest\\" : "tests/"
         }
     },
     "minimum-stability": "stable",

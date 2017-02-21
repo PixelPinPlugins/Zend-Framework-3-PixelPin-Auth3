@@ -30,12 +30,12 @@
  * @link      http://github.com/heiglandreas/mailproxyModule
  */
 
-namespace OrgHeiglHybridAuth;
+namespace PixelpinAuth;
 
 use Zend\ModuleManager\ModuleManager,
     Zend\EventManager\StaticEventManager,
     Zend\Mvc\ModuleRouteListener;
-use OrgHeiglHybridAuth\View\Helper\HybridAuth as HybridAuthViewManager;
+use PixelpinAuth\View\Helper\HybridAuth as HybridAuthViewManager;
     
 
 /**
@@ -63,7 +63,7 @@ class Module
 //        $app          = $e->getParam('application');
 //        $locator      = $app->getLocator();
 //        $renderer     = $locator->get('Zend\View\HelperLoader');
-//        $renderer->registerPlugin('hybridauthinfo', 'OrgHeiglHybridAuth\View\Helper\HybridAuth');
+//        $renderer->registerPlugin('hybridauthinfo', 'PixelpinAuth\View\Helper\HybridAuth');
         $servicemanager = $e->getApplication()->getServiceManager();
         $helperManager = $servicemanager->get('viewhelpermanager');
         $helperManager->setFactory('hybridauthinfo', function() use ($helperManager) {

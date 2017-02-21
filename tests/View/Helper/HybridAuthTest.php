@@ -29,11 +29,11 @@
  * @link      https://github.com/heiglandreas/
  */
 
-namespace OrgHeiglHybridAuthTest\View\Helper;
+namespace PixelpinAuthTest\View\Helper;
 
 use Mockery as M;
-use OrgHeiglHybridAuth\UserToken;
-use OrgHeiglHybridAuth\View\Helper\HybridAuth;
+use PixelpinAuth\UserToken;
+use PixelpinAuth\View\Helper\HybridAuth;
 use Zend\Mvc\Service\ServiceManagerConfig;
 use Zend\ServiceManager\ServiceManager;
 use Zend\View\Helper\Url;

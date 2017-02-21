@@ -29,10 +29,10 @@
  * @link      https://github.com/heiglandreas/
  */
 
-namespace OrgHeiglHybridAuthTest;
+namespace PixelpinAuthTest;
 
 use PHPUnit_Framework_TestCase;
-use OrgHeiglHybridAuth\UserWrapperFactory;
+use PixelpinAuth\UserWrapperFactory;
 use Hybridauth\Entity\Profile;
 use Mockery as M;
 use SocialConnect\Common\Entity\User;
@@ -44,7 +44,7 @@ class UserProxyFactoryTest extends PHPUnit_Framework_TestCase
         $factory = new UserWrapperFactory();
         $userObj = new User();
         $obj = $factory->factory($userObj);
-        $this->assertInstanceof('\OrgHeiglHybridAuth\UserInterface', $obj);
+        $this->assertInstanceof('\PixelpinAuth\UserInterface', $obj);
     }
 
     public function testCreationWithUnknownUserObject()
@@ -52,7 +52,7 @@ class UserProxyFactoryTest extends PHPUnit_Framework_TestCase
         $factory = new UserWrapperFactory();
         $userObj = M::mock(User::class);
         $obj = $factory->factory($userObj);
-        $this->assertInstanceof('\OrgHeiglHybridAuth\UserInterface', $obj);
-        $this->assertInstanceof('\OrgHeiglHybridAuth\DummyUserWrapper', $obj);
+        $this->assertInstanceof('\PixelpinAuth\UserInterface', $obj);
+        $this->assertInstanceof('\PixelpinAuth\DummyUserWrapper', $obj);
     }
 }

@@ -28,15 +28,15 @@
  * @since     06.03.2012
  * @link      http://github.com/heiglandreas/php.ug
  */
-namespace OrgHeiglHybridAuth;
+namespace PixelpinAuth;
 
-use OrgHeiglHybridAuth\Controller\IndexController;
-use OrgHeiglHybridAuth\Service\HybridAuthFactory;
-use OrgHeiglHybridAuth\Service\IndexControllerFactory;
-use OrgHeiglHybridAuth\Service\SessionFactory;
-use OrgHeiglHybridAuth\Service\UserFactory;
-use OrgHeiglHybridAuth\Service\ViewHelperFactory;
-use OrgHeiglHybridAuth\View\Helper\HybridAuth;
+use PixelpinAuth\Controller\IndexController;
+use PixelpinAuth\Service\HybridAuthFactory;
+use PixelpinAuth\Service\IndexControllerFactory;
+use PixelpinAuth\Service\SessionFactory;
+use PixelpinAuth\Service\UserFactory;
+use PixelpinAuth\Service\ViewHelperFactory;
+use PixelpinAuth\View\Helper\HybridAuth;
 use SocialConnect\Common\Http\Client\ClientInterface;
 use SocialConnect\Common\Http\Client\Guzzle;
 use SocialConnect\Provider\Session\Session;
@@ -50,7 +50,7 @@ return [
                 'options' => [
                     'route'    => '/authenticate',
                     'defaults' => [
-                        '__NAMESPACE__' => 'OrgHeiglHybridAuth\Controller',
+                        '__NAMESPACE__' => 'PixelpinAuth\Controller',
                         'controller' => 'IndexController',
                         'action'     => 'login',
                     ],
@@ -98,9 +98,9 @@ return [
     ],
     'service_manager' => [
         'factories' => [
-            'OrgHeiglHybridAuthSession' => SessionFactory::class,
-            'OrgHeiglHybridAuthBackend' => HybridAuthFactory::class,
-            'OrgHeiglHybridAuthToken' => UserFactory::class,
+            'PixelpinAuthSession' => SessionFactory::class,
+            'PixelpinAuthBackend' => HybridAuthFactory::class,
+            'PixelpinAuthToken' => UserFactory::class,
         ],
         'invokables' => [
             UserWrapperFactory::class => UserWrapperFactory::class,
@@ -116,7 +116,7 @@ return [
             'hybridauthinfo' => HybridAuth::class
         ]
     ],
-    'OrgHeiglHybridAuth' => [
+    'PixelpinAuth' => [
         'socialAuth' => [
             'redirectUri' => 'http://local.zend.co.uk/authenticate/backend',
             'provider' => [

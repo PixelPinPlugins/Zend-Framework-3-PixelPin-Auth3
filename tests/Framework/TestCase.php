@@ -7,7 +7,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace OrgHeiglHybridAuthTest\Framework;
+namespace PixelpinAuthTest\Framework;
 
 use \PHPUnit_Framework_TestCase;
 

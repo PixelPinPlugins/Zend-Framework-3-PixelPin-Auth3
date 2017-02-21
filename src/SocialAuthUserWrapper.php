@@ -29,10 +29,10 @@
  * @link      https://github.com/heiglandreas/HybridAuth
  */
 
-namespace OrgHeiglHybridAuth;
+namespace PixelpinAuth;
 
 use Hybridauth\Entity\Profile;
-use OrgHeiglHybridAuth\UserInterface;
+use PixelpinAuth\UserInterface;
 use SocialConnect\Common\Entity\User;
 
 /**

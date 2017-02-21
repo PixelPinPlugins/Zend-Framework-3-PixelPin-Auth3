@@ -29,14 +29,14 @@
  * @link      https://github.com/heiglandreas/
  */
 
-namespace OrgHeiglHybridAuthTest;
+namespace PixelpinAuthTest;
 
 
 use Interop\Container\ContainerInterface;
-use OrgHeiglHybridAuth\DummyUserWrapper;
-use OrgHeiglHybridAuth\Service\UserFactory;
+use PixelpinAuth\DummyUserWrapper;
+use PixelpinAuth\Service\UserFactory;
 use Mockery as M;
-use OrgHeiglHybridAuth\SocialAuthUserWrapper;
+use PixelpinAuth\SocialAuthUserWrapper;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 class UserFactoryTest extends \PHPUnit_Framework_TestCase
@@ -53,10 +53,10 @@ class UserFactoryTest extends \PHPUnit_Framework_TestCase
                  ->with('authenticated')
                  ->andReturn(false)
                  ->mock();
-        $servicemanager->shouldReceive('get')->with('OrgHeiglHybridAuthSession')->andReturn($session);
+        $servicemanager->shouldReceive('get')->with('PixelpinAuthSession')->andReturn($session);
 
         $token = $factory($servicemanager, '');
-        $this->assertInstanceof('\OrgHeiglHybridAuth\UserToken', $token);
+        $this->assertInstanceof('\PixelpinAuth\UserToken', $token);
         $this->assertFalse($token->isAuthenticated());
         $this->assertAttributeEquals(new DummyUserWrapper(), 'user', $token);
         $this->assertempty($token->getService());
@@ -77,10 +77,10 @@ class UserFactoryTest extends \PHPUnit_Framework_TestCase
             ->once()
             ->with('authenticated')
             ->andReturn(false)->mock();
-        $servicemanager->shouldReceive('get')->with('OrgHeiglHybridAuthSession')->andReturn($session);
+        $servicemanager->shouldReceive('get')->with('PixelpinAuthSession')->andReturn($session);
 
         $token = $factory($servicemanager, '');
-        $this->assertInstanceof('\OrgHeiglHybridAuth\UserToken', $token);
+        $this->assertInstanceof('\PixelpinAuth\UserToken', $token);
         $this->assertFalse($token->isAuthenticated());
         $this->assertAttributeEquals(new DummyUserWrapper(), 'user', $token);
         $this->assertempty($token->getService());
@@ -100,10 +100,10 @@ class UserFactoryTest extends \PHPUnit_Framework_TestCase
         $session->shouldReceive('offsetGet')
             ->times(3)
             ->andReturn(true, $user, 'twitter')->mock();
-        $servicemanager->shouldReceive('get')->with('OrgHeiglHybridAuthSession')->andReturn($session);
+        $servicemanager->shouldReceive('get')->with('PixelpinAuthSession')->andReturn($session);
 
         $token = $factory($servicemanager, '');
-        $this->assertInstanceof('\OrgHeiglHybridAuth\UserToken', $token);
+        $this->assertInstanceof('\PixelpinAuth\UserToken', $token);
         $this->assertTrue($token->isAuthenticated());
         $this->assertAttributeEquals($user, 'user', $token);
         $this->assertEquals('twitter', $token->getService());
@@ -123,10 +123,10 @@ class UserFactoryTest extends \PHPUnit_Framework_TestCase
         $session->shouldReceive('offsetGet')
             ->times(3)
             ->andReturn(true, null, null)->mock();
-        $servicemanager->shouldReceive('get')->with('OrgHeiglHybridAuthSession')->andReturn($session);
+        $servicemanager->shouldReceive('get')->with('PixelpinAuthSession')->andReturn($session);
 
         $token = $factory($servicemanager, '');
-        $this->assertInstanceof('\OrgHeiglHybridAuth\UserToken', $token);
+        $this->assertInstanceof('\PixelpinAuth\UserToken', $token);
         $this->assertFalse($token->isAuthenticated());
        // $this->assertAttributeEquals('twitter', 'user', $token);
        // $this->assertEquals($user, $token->getService());

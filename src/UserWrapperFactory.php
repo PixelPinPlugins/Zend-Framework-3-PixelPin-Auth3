@@ -29,7 +29,7 @@
  * @link      https://github.com/heiglandreas/HybridAuth
  */
 
-namespace OrgHeiglHybridAuth;
+namespace PixelpinAuth;
 
 use SocialConnect\Common\Entity\User;
 use Exception;

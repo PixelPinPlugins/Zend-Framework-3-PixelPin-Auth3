@@ -29,7 +29,7 @@
  * @link      https://github.com/heiglandreas/HybridAuth
  */
 
-namespace OrgHeiglHybridAuth;
+namespace PixelpinAuth;
 
 /**
  * This class works as proxy to the HybridAuth-User-Object

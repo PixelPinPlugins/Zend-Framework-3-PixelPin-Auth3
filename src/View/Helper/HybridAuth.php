@@ -26,11 +26,11 @@
  * @license   http://www.opesource.org/licenses/mit-license.php MIT-License
  * @version   0.0
  * @since     05.12.2012
- * @link      http://github.com/heiglandreas/OrgHeiglHybridAuth
+ * @link      http://github.com/heiglandreas/PixelpinAuth
  */
-namespace OrgHeiglHybridAuth\View\Helper;
+namespace PixelpinAuth\View\Helper;
 
-use OrgHeiglHybridAuth\UserToken;
+use PixelpinAuth\UserToken;
 use Zend\View\Helper\AbstractHelper;
 use Zend\View\Helper\Url;
 use Zend\ServiceManager\ServiceLocatorAwareInterface;
@@ -44,7 +44,7 @@ use Zend\ServiceManager\ServiceLocatorAwareInterface;
  * @license   http://www.opesource.org/licenses/mit-license.php MIT-License
  * @version   0.0
  * @since     05.12.2012
- * @link      http://github.com/heiglandreas/OrgHeiglHybridAuth
+ * @link      http://github.com/heiglandreas/PixelpinAuth
  */
 class HybridAuth extends AbstractHelper
 {

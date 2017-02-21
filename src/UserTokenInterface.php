@@ -29,7 +29,7 @@
  * @link      https://github.com/heiglandreas/HybridAuth
  */
 
-namespace OrgHeiglHybridAuth;
+namespace PixelpinAuth;
 
 /**
  * This interface describes methods to access user-informations

@@ -28,12 +28,12 @@
  * @since     11.01.13
  * @link      https://github.com/heiglandreas/HybridAuth
  */
-namespace OrgHeiglHybridAuth\Service;
+namespace PixelpinAuth\Service;
 
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
-use OrgHeiglHybridAuth\Controller\IndexController;
-use OrgHeiglHybridAuth\UserWrapperFactory;
+use PixelpinAuth\Controller\IndexController;
+use PixelpinAuth\UserWrapperFactory;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;
 use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;
@@ -69,8 +69,8 @@ class IndexControllerFactory implements FactoryInterface
         $requestedName,
         array $options = null
     ) {
-        $authenticator  = $container->get('OrgHeiglHybridAuthBackend');
-        $session        = $container->get('OrgHeiglHybridAuthSession');
+        $authenticator  = $container->get('PixelpinAuthBackend');
+        $session        = $container->get('PixelpinAuthSession');
         $wrapperFactory = $container->get(UserWrapperFactory::class);
 
         $controller = new IndexController();

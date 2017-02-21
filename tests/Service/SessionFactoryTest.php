@@ -29,11 +29,11 @@
  * @link      https://github.com/heiglandreas/
  */
 
-namespace OrgHeiglHybridAuthTest;
+namespace PixelpinAuthTest;
 
 use Interop\Container\ContainerInterface;
 use \PHPUnit_Framework_TestCase;
-use \OrgHeiglHybridAuth\Service\SessionFactory;
+use \PixelpinAuth\Service\SessionFactory;
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Mockery as M;
 
@@ -46,7 +46,7 @@ class SessionFactoryTest extends PHPUnit_Framework_TestCase
         $servicemanager = M::mock(ContainerInterface::class);
         $servicemanager->shouldReceive('get')
                        ->with('Config')
-                       ->andReturn(['OrgHeiglHybridAuth' => ['session_name' => 'foo']]);
+                       ->andReturn(['PixelpinAuth' => ['session_name' => 'foo']]);
 
         $session = $factory($servicemanager, '');
         $this->assertInstanceof('\Zend\Session\Container', $session);

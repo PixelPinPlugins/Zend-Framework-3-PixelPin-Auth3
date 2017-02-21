@@ -29,12 +29,12 @@
  * @link      https://github.com/heiglandreas/HybridAuth
  */
 
-namespace OrgHeiglHybridAuth;
+namespace PixelpinAuth;
 
-use OrgHeiglHybridAuth\SocialAuthUserWrapper;
-use OrgHeiglHybridAuth\DummyUserWrapper;
-use OrgHeiglHybridAuth\UserTokenInterface;
-use OrgHeiglHybridAuth\UserInterface;
+use PixelpinAuth\SocialAuthUserWrapper;
+use PixelpinAuth\DummyUserWrapper;
+use PixelpinAuth\UserTokenInterface;
+use PixelpinAuth\UserInterface;
 
 /**
  * This class works as proxy to the HybridAuth-User-Object

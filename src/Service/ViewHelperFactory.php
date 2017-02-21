@@ -28,11 +28,11 @@
  * @since     11.01.13
  * @link      https://github.com/heiglandreas/HybridAuth
  */
-namespace OrgHeiglHybridAuth\Service;
+namespace PixelpinAuth\Service;
 
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
-use OrgHeiglHybridAuth\View\Helper\HybridAuth;
+use PixelpinAuth\View\Helper\HybridAuth;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
@@ -68,10 +68,10 @@ class ViewHelperFactory implements FactoryInterface
     ) {
         $config = $container->get('Config');
         $url    = $container->get('ViewHelperManager')->get('url');
-        $token  = $container->get('OrgHeiglHybridAuthToken');
+        $token  = $container->get('PixelpinAuthToken');
 
         return new HybridAuth(
-            $config['OrgHeiglHybridAuth'],
+            $config['PixelpinAuth'],
             $token,
             $url
         );

@@ -29,12 +29,12 @@
  * @link      https://github.com/heiglandreas/
  */
 
-namespace OrgHeiglHybridAuthTest;
+namespace PixelpinAuthTest;
 
 use Interop\Container\ContainerInterface;
 use \PHPUnit_Framework_TestCase;
 use \Zend\Mvc\Router\Http\TreeRouteStack as HttpRouter;
-use \OrgHeiglHybridAuth\Service\HybridAuthFactory;
+use \PixelpinAuth\Service\HybridAuthFactory;
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Mockery as M;
 

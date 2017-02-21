@@ -28,13 +28,13 @@
  * @since     11.01.13
  * @link      https://github.com/heiglandreas/HybridAuth
  */
-namespace OrgHeiglHybridAuth\Service;
+namespace PixelpinAuth\Service;
 
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
-use OrgHeiglHybridAuth\SocialAuthUserWrapper;
-use OrgHeiglHybridAuth\DummyUserWrapper;
-use OrgHeiglHybridAuth\UserToken;
+use PixelpinAuth\SocialAuthUserWrapper;
+use PixelpinAuth\DummyUserWrapper;
+use PixelpinAuth\UserToken;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;
 use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;
@@ -71,7 +71,7 @@ class UserFactory implements FactoryInterface
         $requestedName,
         array $options = null
     ) {
-        $session = $container->get('OrgHeiglHybridAuthSession');
+        $session = $container->get('PixelpinAuthSession');
         $user = new DummyUserWrapper();
         $service = '';
         if ($session->offsetExists('authenticated') && true === $session->offsetGet('authenticated')) {

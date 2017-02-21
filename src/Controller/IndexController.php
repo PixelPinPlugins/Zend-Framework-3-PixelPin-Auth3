@@ -28,14 +28,14 @@
  * @since     27.12.12
  * @link      https://github.com/heiglandreas/
  */
-namespace OrgHeiglHybridAuth\Controller;
+namespace PixelpinAuth\Controller;
 
 use Hybridauth\Hybridauth;
 use Hybridauth\Endpoint;
 use SocialConnect\Auth\Service;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Session\Container as SessionContainer;
-use OrgHeiglHybridAuth\UserWrapperFactory;
+use PixelpinAuth\UserWrapperFactory;
 use SocialConnect\OpenIDConnect\Exception\InvalidJWT;
 use Exception;
 

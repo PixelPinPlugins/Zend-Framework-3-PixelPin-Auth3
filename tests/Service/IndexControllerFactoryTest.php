@@ -29,11 +29,11 @@
  * @link      https://github.com/heiglandreas/
  */
 
-namespace OrgHeiglHybridAuthTest;
+namespace PixelpinAuthTest;
 
 use Interop\Container\ContainerInterface;
 use \PHPUnit_Framework_TestCase;
-use \OrgHeiglHybridAuth\Service\IndexControllerFactory;
+use \PixelpinAuth\Service\IndexControllerFactory;
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Mockery as M;
 

@@ -28,7 +28,7 @@
  * @since     11.01.13
  * @link      https://github.com/heiglandreas/HybridAuth
  */
-namespace OrgHeiglHybridAuth\Service;
+namespace PixelpinAuth\Service;
 
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
@@ -72,7 +72,7 @@ class HybridAuthFactory implements FactoryInterface
         array $options = null
     ) {
         $config = $container->get('Config');
-        $config = $config['OrgHeiglHybridAuth'];
+        $config = $config['PixelpinAuth'];
 
         return new Service(
             $container->get(ClientInterface::class),
