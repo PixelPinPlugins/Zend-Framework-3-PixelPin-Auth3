@@ -118,22 +118,12 @@ return [
     ],
     'PixelpinAuth' => [
         'socialAuth' => [
-            'redirectUri' => 'http://local.zend.co.uk/authenticate/backend',
+            'redirectUri' => 'http://www.example.co.uk/authenticate/backend',
             'provider' => [
-                'twitter' => [
-                    'applicationId' => '',
-                    'applicationSecret' => '',
-                    'scope' => ['email'],
-                ],
                 'pixelpin' => [
-                    'applicationId' => '8878OXYIJ2Z7IKXFXR01RPCI6LGRYK',
-                    'applicationSecret' => 'vca5nT64pDQ*5psd$c6WvgxjWlgn)-',
-                    'scope' => ['openid email profile address phone'],
-                ],
-                'github' => [
                     'applicationId' => '',
                     'applicationSecret' => '',
-                    'scope' => ['email'],
+                    'scope' => ['openid email profile address phone'],
                 ],
             ],
         ],
