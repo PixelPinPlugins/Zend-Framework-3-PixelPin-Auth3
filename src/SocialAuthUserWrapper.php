@@ -153,18 +153,6 @@ class SocialAuthUserWrapper implements UserInterface
      */
     public function getDisplayName()
     {
-        /*if ($this->user->fullname) {
-            return $this->user->fullname;
-        }
-
-        if (! $this->user->firstname && ! $this->user->lastname) {
-            return $this->user->username;
-        }
-
-        if (! $this->user->firstname) {
-            return $this->user->lastname;
-        }*/
-
         return $this->user->firstname . ' ' . $this->user->lastname;
     }
 }

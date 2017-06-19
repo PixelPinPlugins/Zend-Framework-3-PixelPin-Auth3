@@ -31,15 +31,6 @@
 namespace PixelpinAuth;
 
 return array('PixelpinAuth' => array(
-    /*'hybrid_auth' => array(
-        'base_url' => 'http://www.example.co.uk/authenticate/backend',
-         'providers' => array(
-            'PixelPin' => array('enabled' => true, 'keys' => array('key' => '', 'secret' => '')),
-        ),
-        'debug_mode' => true,
-        // For some reason Hybrid_Auth doesn't create file in a specified folder, be sure that it exists
-        'debug_file' => __DIR__ . '/hybrid_auth.log',
-    ),*/
     'backend' => [
         'pixelpin'
     ],
