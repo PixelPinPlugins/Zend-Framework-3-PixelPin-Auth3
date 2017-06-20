@@ -61,11 +61,6 @@ class UserWrapperFactory
                 return new SocialAuthUserWrapper($userObject);
                 break;
             case 'Hybridauth\\Entity\\Profile':
-            case 'Hybridauth\\Entity\\Twitter\\Profile':
-                $userProxy = new HybridAuthUserWrapper();
-                $userProxy->setUser($userObject);
-                return $userProxy;
-                break;
             case 'Hybridauth\\Entity\\PixelPin\\Profile':
                 $userProxy = new SocialAuthUserWrapper();
                 $userProxy->setUser($userObject);
@@ -73,9 +68,8 @@ class UserWrapperFactory
                 return $userProxy;
                 break;
             default:
-                return new SocialAuthUserWrapper();
+                return new DummyUserWrapper();
         }
-
         throw new \UnexpectedValueException(sprintf(
             'The given Object could not be found. Found "%s" instead',
             get_Class($userObject)
